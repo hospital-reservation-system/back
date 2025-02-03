@@ -26,7 +26,7 @@ const ORDER_ROUTES = {
 /** 인증 라우터 */
 const AUTH_ROUTES = {
   AUTH_API: "/api/auth",
-}
+};
 
 export const ROUTES_INDEX = {
   ...ADMIN_ROUTES,
