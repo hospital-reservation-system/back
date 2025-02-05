@@ -1,0 +1,1 @@
+{"version":3,"file":"auth.service.type.js","sourceRoot":"","sources":["../../../../src/api/auth/service/auth.service.type.ts"],"names":[],"mappings":"","sourcesContent":["export interface AuthService {\r\n  /** 로그인 */\r\n  login(email: string, password: string): Promise<string>;\r\n  /** 로그아웃 */\r\n  logout(): Promise<void>;\r\n}"]}

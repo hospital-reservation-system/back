@@ -1,8 +1,8 @@
-export class Admin implements IAdmin {
+export default class Admin implements IAdmin {
   id: string;
   email: string;
   password: string;
-  name: string;
+  hospitalName: string;
   role?: role;
   hospital?: IHospital;
   products?: IProduct[];
@@ -13,7 +13,7 @@ export class Admin implements IAdmin {
     this.id = params.id;
     this.email = params.email;
     this.password = params.password;
-    this.name = params.name;
+    this.hospitalName = params.hospitalName;
     this.role = params.role ?? "admin";
     this.hospital = params.hospital;
     this.products = params.products;
