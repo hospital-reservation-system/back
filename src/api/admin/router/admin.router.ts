@@ -1,13 +1,13 @@
 import AdminController from "@/api/admin/controller/admin.controller";
 import { AdminServiceImpl } from "@/api/admin/service/admin.service";
 import { MongooseAdminRepository } from "@/api/admin/repository/mongooseAdmin.repository";
-import express from "express";
+import express, { Router } from "express";
 import { extractPath } from "@/utils/path.util";
 import { ROUTES_INDEX } from "@/api/index";
 import { authAdminMiddleware } from "@/api/common/middleware/authAdmin.middleware";
 import { authRoleMiddleware } from "@/api/common/middleware/authRole.middleware";
 
-const adminRouter = express.Router();
+const adminRouter: Router = express.Router();
 
 // const adminService = new AdminServiceImpl(new MongooseAdminRepository());
 

@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Router } from "express";
 
 import ProductController from "../controller/product.controller";
 import { extractPath } from "@/utils/path.util";
@@ -8,13 +8,13 @@ import { MongooseProductRepository } from "../repository/mongooseProduct.reposit
 import { MongooseAdminRepository } from "@/api/admin/repository/mongooseAdmin.repository";
 import { authAdminMiddleware } from "@/api/common/middleware/authAdmin.middleware";
 import { authRoleMiddleware } from "@/api/common/middleware/authRole.middleware";
-const prodcutRouter = express.Router();
+const prodcutRouter: Router = express.Router();
 
 const productController = new ProductController(
   new ProductServiceImpl(
-    new MongooseProductRepository(), 
+    new MongooseProductRepository(),
     new MongooseAdminRepository()
-  ),
+  )
 );
 
 const PRODUCT_ROUTES = {

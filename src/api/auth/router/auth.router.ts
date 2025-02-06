@@ -1,11 +1,11 @@
-import express from "express";
+import express, { Router } from "express";
 import AuthController from "@/api/auth/controller/auth.controller";
 import { AuthServiceImpl } from "@/api/auth/service/auth.service";
 import { MongooseAdminRepository } from "@/api/admin/repository/mongooseAdmin.repository";
 import { extractPath } from "@/utils/path.util";
 import { ROUTES_INDEX } from "@/api/index";
 
-const authRouter = express.Router();
+const authRouter: Router = express.Router();
 
 const AUTH_ROUTES = {
   /** 로그인 */
